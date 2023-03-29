@@ -29,18 +29,21 @@
   //  $directory="../administracion/";
     
     //foreach ($data as $producto){
+        
 
+        foreach($productos as $producto){
+                
     ?> 
      
-    <div class="col mb-5">
+        <div class="col mb-5">
                     <div class="card h-100">
                         <!-- Product image-->
-                    <img class="card-img-top" src="<?/*php echo $directory."/".$producto->img;*/?>"  alt="..." />
+                    <img class="card-img-top" src="<?php echo PATH."/img/".$producto[3];?>"  alt="..." />
                         <!-- Product details-->
                         <div class="card-body p-4">
                             <div class="text-center">
                                 <!-- Product name-->
-                                <h5 class="fw-bolder"><?/*= $producto->nombre */?></h5>
+                                <h5 class="fw-bolder"><?= $producto[1] ?></h5>
                                 <!-- Product price-->
                                 
                             </div>
@@ -54,7 +57,7 @@
                     </div>
                 </div>
     
-  <?php   ?>
+  <?php  } ?>
 
 </div>
 </div>
