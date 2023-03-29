@@ -1,7 +1,7 @@
 <?php
 require_once 'Controller.php';
 require_once './Model/ProductosModel.php';
-//include_once './Core/validaciones.php';
+//include_once './Core/config.php';
 class ProductosController extends Controller{
 
     private $model;

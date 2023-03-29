@@ -1,3 +1,3 @@
 <?php
-const PATH='/LIS/Desafio2_LIS';
+const PATH='/Desafio2_LIS';
 
