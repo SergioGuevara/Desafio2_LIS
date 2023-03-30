@@ -72,4 +72,7 @@ class ProductosController extends Controller{
             }
         }
     }
+    public function MostrarCarrito(){
+        $this->render("mostrarCarrito.php");
+    }
 }
