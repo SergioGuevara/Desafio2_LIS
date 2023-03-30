@@ -7,14 +7,21 @@
     <meta name="author" content="" />
     <link rel="stylesheet" href="../assets/css/styles.css">
     <link href="../assets/css/design.css" rel="stylesheet" />
+<<<<<<< HEAD
     <link rel="icon" type="image/x-icon" href="../assets/favicon.ico" />
+=======
+    <link rel="icon" type="image/x-icon" href="assets/favicon.ico" />
+>>>>>>> c2d54bf9be49571863364682610a37ab4e0c2c7e
     <!-- Bootstrap icons-->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/font/bootstrap-icons.css" rel="stylesheet" />
     <!-- Core theme CSS (includes Bootstrap)-->
     <title>TextilExport</title>
+<<<<<<< HEAD
     <?php
    // include './View/cabecera.php';
     ?>
+=======
+>>>>>>> c2d54bf9be49571863364682610a37ab4e0c2c7e
 </head>
 <body >
 
@@ -70,7 +77,12 @@
 <footer class="foot">
  <p class="">Derechos reservados &copy;</p>
 </footer>
+<<<<<<< HEAD
 <script src="../assets/js/jquery.min.js"></script>
 <script src="../assets/js/bootstrap.min.js"></script>
+=======
+<script src="assets/js/jquery.min.js"></script>
+<script src="assets/js/bootstrap.min.js"></script>
+>>>>>>> c2d54bf9be49571863364682610a37ab4e0c2c7e
 </body>
 </html>

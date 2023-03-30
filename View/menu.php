@@ -1,4 +1,5 @@
 <?php
+<<<<<<< HEAD
 //if (isset($_SESSION['success_message'])){
 ?>
 <!-- <script>
@@ -8,6 +9,17 @@ alertify.success('<?//=$_SESSION['success_message'] ?>');
 //unset($_SESSION['success_message']);
 //} ?>
    <!-- <nav class="navbar navbar-inverse">
+=======
+if (isset($_SESSION['success_message'])){
+?>
+<script>
+alertify.success('<?=$_SESSION['success_message'] ?>');
+</script>
+<?php 
+unset($_SESSION['success_message']);
+} ?>
+    <nav class="navbar navbar-inverse">
+>>>>>>> c2d54bf9be49571863364682610a37ab4e0c2c7e
       <div class="container-fluid">
         <div class="navbar-header">
           <button type="button" class="navbar-toggle collapsed" 
@@ -28,12 +40,21 @@ alertify.success('<?//=$_SESSION['success_message'] ?>');
                  role="button" aria-haspopup="true" 
                  aria-expanded="false">Libros<span class="caret"></span></a>
               <ul class="dropdown-menu">
+<<<<<<< HEAD
                 <li><a href="<?//= PATH ?>/Libros/create">Registrar libro</a></li>
                 <li><a href="<?//= PATH ?>/Libros">Ver lista de libros</a></li>
               </ul>
             </li> -->
             <?php //if($_SESSION['login_data']['id_tipo_usuario']==1){ ?>
             <!-- <li class="dropdown">
+=======
+                <li><a href="<?= PATH ?>/Libros/create">Registrar libro</a></li>
+                <li><a href="<?= PATH ?>/Libros">Ver lista de libros</a></li>
+              </ul>
+            </li>
+            <?php if($_SESSION['login_data']['id_tipo_usuario']==1){ ?>
+            <li class="dropdown">
+>>>>>>> c2d54bf9be49571863364682610a37ab4e0c2c7e
               <a href="#" class="dropdown-toggle" data-toggle="dropdown" 
                  role="button" aria-haspopup="true" 
                  aria-expanded="false">Autores <span class="caret"></span></a>
@@ -56,17 +77,30 @@ alertify.success('<?//=$_SESSION['success_message'] ?>');
                  role="button" aria-haspopup="true" 
                  aria-expanded="false">Editoriales<span class="caret"></span></a>
               <ul class="dropdown-menu">
+<<<<<<< HEAD
                   <li><a href="<?//= PATH ?>/Editoriales/create">Registrar editorial</a></li>
                 <li><a href="<?//= PATH ?>/Editoriales">Ver lista de editoriales</a></li>
               </ul>
             </li> -->
             <?php //} ?>
          <!-- </ul>
+=======
+                  <li><a href="<?= PATH ?>/Editoriales/create">Registrar editorial</a></li>
+                <li><a href="<?= PATH ?>/Editoriales">Ver lista de editoriales</a></li>
+              </ul>
+            </li>
+            <?php } ?>
+          </ul>
+>>>>>>> c2d54bf9be49571863364682610a37ab4e0c2c7e
           <ul class="nav navbar-nav navbar-right">
           <li class="dropdown">
               <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false"><?=$_SESSION['login_data']['usuario']?> (<?=$_SESSION['login_data']['id_tipo_usuario']?>) <span class="caret"></span></a>
               <ul class="dropdown-menu">
+<<<<<<< HEAD
                   <li><a href="<?//= PATH ?>/Usuarios/logout">Cerrar sesion</a></li>
+=======
+                  <li><a href="<?= PATH ?>/Usuarios/logout">Cerrar sesion</a></li>
+>>>>>>> c2d54bf9be49571863364682610a37ab4e0c2c7e
                 
               </ul>
             </li>
@@ -75,5 +109,9 @@ alertify.success('<?//=$_SESSION['success_message'] ?>');
           
         </div>
       </div>
+<<<<<<< HEAD
     </nav> -->
+=======
+    </nav>
+>>>>>>> c2d54bf9be49571863364682610a37ab4e0c2c7e
         
