@@ -69,17 +69,36 @@ include './View/menu.php';?>
                 <td align="center"><h3><?php echo number_format($total,2)?></h3></td>
                 <td></td>
             </tr>
+            
             <tr>
-                <td colspan="5">
-                    <form action="<?=PATH."/Public/checkout.html"?>" method="post">
+                <td colspan="1">
+                </td>
+                <td colspan="1">
+                    <form action="<?=PATH."/generadorPdf.php"?>" method="post">
                         <button class="btn btn-primary btn-lg btn-block" type="submit" name="btnAccion"value="proceder">
-                            Proceder a pagar>>
+                            Generar PDF>>
                         </button>
                 </form>
-                
-                
+                </td>
+                <td colspan="1">
+                    <form action="<?=PATH."/Public/checkout.html"?>" method="post">
+                    <center> 
+                       <button class="btn btn-primary btn-lg btn-block" type="submit" name="btnAccion"value="proceder">
+                            Proceder a pagar>>
+                        </button>
+                        </center>
+           
+                </form>
+                </td>
+                <td colspan="1">
+                </td>
+                <td colspan="1">
                 </td>
             </tr>
+            
+             
+               
+           
         </tbody>
     </table>
     <?php
