@@ -29,7 +29,7 @@
     ?> 
         <div class="col mb-5">
                     <div class="card h-100">
-                    <img class="card-img-top" src="<?php echo PATH."/img/".$producto[3];?>"  alt="..." />
+                    <img class="card-img-top" src="<?php echo PATH."/View/assets/img/".$producto[3];?>"  alt="..." />
                         <div class="card-body p-4">
                             <div class="text-center">
                                 <h5 class="fw-bolder"><?= $producto[1] ?></h5> 
@@ -39,6 +39,8 @@
                         <form action="<?=PATH.'/Productos/carrito/'?>" method="post">
                         <input type="hidden" name="id" id="id" value="<?php echo $producto['codigo_producto'];?>">
                         <input type="hidden" name="nombre" id="nombre" value="<?php echo $producto['nombre_producto'];?>">
+                        <input type="hidden" name="descripcion" id="descripcion" value="<?php echo $producto['descripcion'];?>">
+                        <input type="hidden" name="imagen" id="imagen" value="<?php echo $producto['imagen'];?>">
                         <input type="hidden" name="precio" id="precio" value="<?php echo $producto['precio'];?>">
                         <input type="hidden" name="cantidad" id="cantidad" value="<?php echo 1;?>">
                         <button class="btn btn-outline-dark mt-auto" 

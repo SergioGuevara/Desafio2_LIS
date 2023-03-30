@@ -74,7 +74,7 @@ include './View/menu.php';?>
                 <td colspan="1">
                 </td>
                 <td colspan="1">
-                    <form action="<?=PATH."/generadorPdf.php"?>" method="post">
+                    <form action="<?=PATH."/Productos/generarPDF/"?>" method="post">
                         <button class="btn btn-primary btn-lg btn-block" type="submit" name="btnAccion"value="proceder">
                             Generar PDF>>
                         </button>
