@@ -71,19 +71,7 @@ include './View/menu.php';?>
             </tr>
             <tr>
                 <td colspan="5">
-                    <form action="pagar.php" method="post">
-                        <div class="alert-sucess">
-                        <div class="form-group">
-                            <label for="my-input">Correo: </label>
-                            <input 
-                            id="email" 
-                            name="email" 
-                            class="form-control" 
-                            type="email" 
-                            placeholder="Escribe tu correo" required>
-                        </div>
-                        <small id="emailHelp" class="form-text text-muted">Los productos se enviaran a este correo</small>
-                        </div>
+                    <form action="<?=PATH."/Public/checkout.html"?>" method="post">
                         <button class="btn btn-primary btn-lg btn-block" type="submit" name="btnAccion"value="proceder">
                             Proceder a pagar>>
                         </button>
