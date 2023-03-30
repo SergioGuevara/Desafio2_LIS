@@ -13,46 +13,40 @@
 <body >
 
 <div class="cont">
-    <header class="head">
     
-        <h1 class="title">TextilExport</h1>
-        <p>Siempre los mejores estilos</p>
-    </header>
+    <?php
+     include './View/menu.php';
+     //include './View/carrito.php'
+    ?>
     <div class="contenido">
-    
     <section class="py-5">
         <div class="container px-4 px-lg-5 mt-5">
-            <div class="row gx-4 gx-lg-5 row-cols-2 row-cols-md-3 row-cols-xl-4 justify-content-center">
-               
+            <div class="row gx-4 gx-lg-5 row-cols-2 row-cols-md-3 row-cols-xl-4 justify-content-center">             
     <?php
-   // $data = simplexml_load_file('../administracion/data/productos.xml');
-  //  $directory="../administracion/";
-    
-    //foreach ($data as $producto){
-        
-
-        foreach($productos as $producto){
-                
+        foreach($productos as $producto){    
+            //echo var_dump($producto);  
+            //echo var_dump($_SESSION['CARRITO']); 
     ?> 
-     
         <div class="col mb-5">
                     <div class="card h-100">
-                        <!-- Product image-->
                     <img class="card-img-top" src="<?php echo PATH."/img/".$producto[3];?>"  alt="..." />
-                        <!-- Product details-->
                         <div class="card-body p-4">
                             <div class="text-center">
-                                <!-- Product name-->
-                                <h5 class="fw-bolder"><?= $producto[1] ?></h5>
-                                <!-- Product price-->
-                                
+                                <h5 class="fw-bolder"><?= $producto[1] ?></h5> 
                             </div>
                         </div>
-                        <!-- Product actions-->
                         <div class="card-footer p-4 pt-0 border-top-0 bg-transparent">
-                            <form class="text-center">
-                                <a class="btn btn-outline-dark mt-auto" href="carrito.php?product=<?/*= $producto->nombre*/?>">Agregar al carrito</a>
-                    </form>
+                        <form action="<?=PATH.'/Productos/carrito/'?>" method="post">
+                        <input type="hidden" name="id" id="id" value="<?php echo $producto['codigo_producto'];?>">
+                        <input type="hidden" name="nombre" id="nombre" value="<?php echo $producto['nombre_producto'];?>">
+                        <input type="hidden" name="precio" id="precio" value="<?php echo $producto['precio'];?>">
+                        <input type="hidden" name="cantidad" id="cantidad" value="<?php echo 1;?>">
+                        <button class="btn btn-outline-dark mt-auto" 
+                                type="submit" 
+                                name="btnAccion" 
+                                value="Agregar"
+                                >Agregar al carrito
+                        </button>
                         </div>
                     </div>
                 </div>
@@ -67,7 +61,7 @@
 <footer class="foot">
  <p class="">Derechos reservados &copy;</p>
 </footer>
-<script src="../assets/js/jquery.min.js"></script>
-<script src="../assets/js/bootstrap.min.js"></script>
+<!--<script src="../assets/js/jquery.min.js"></script>-->
+<!--<script src="../assets/js/bootstrap.min.js"></script>-->
 </body>
 </html>
