@@ -1,5 +1,6 @@
 <?php
 include_once 'Model/ProductosModel.php';
+<<<<<<< HEAD
 include_once 'Controller/ProductosController.php';
 include_once 'Core/config.php';
 //var_dump($model->get(''));
@@ -15,3 +16,8 @@ $method=empty($url[3])?"index":$url[3];
 $param=empty($url[4])?"":$url[4];
 $controlador=new $controller();
 $controlador->$method($param);
+=======
+include_once 'Core/config.php';
+$model = new ProductosModel();
+var_dump($model->get(''));
+>>>>>>> origin
