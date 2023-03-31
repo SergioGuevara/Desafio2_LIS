@@ -3,6 +3,8 @@ include_once 'Model/ProductosModel.php';
 include_once 'Controller/ProductosController.php';
 include_once 'Controller/UsuariosController.php';
 include_once 'Controller/CategoriasController.php';
+include_once 'Controller/VentasController.php';
+include_once 'Controller/InventarioController.php';
 include_once 'Core/config.php';
 include_once 'Core/validaciones.php';
 //var_dump($model->get(''));
