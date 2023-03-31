@@ -4,7 +4,6 @@
 <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"> 
-    <!-- Core theme CSS (includes Bootstrap)-->
     <title>TextilExport</title>
     <?php
      include './View/cabecera.php';
@@ -29,7 +28,7 @@
     ?> 
         <div class="col mb-5">
                     <div class="card h-100">
-                    <img class="card-img-top" src="<?php echo PATH."/img/".$producto[3];?>"  alt="..." />
+                    <img class="card-img-top" src="<?php echo PATH."/View/assets/img/".$producto[3];?>"  alt="..." />
                         <div class="card-body p-4">
                             <div class="text-center">
                                 <h5 class="fw-bolder"><?= $producto[1] ?></h5> 

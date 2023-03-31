@@ -1,8 +1,10 @@
+
 <?php
-include_once 'Model/ProductosModel.php';
+include_once 'Controller/CategoriasController.php';
 include_once 'Controller/ProductosController.php';
 include_once 'Core/config.php';
-//var_dump($model->get(''));
+/*$model=new CategoriasModel();
+var_dump($model->get());*/
 $url=$_SERVER['REQUEST_URI'];
 session_start();
 //session_start();
