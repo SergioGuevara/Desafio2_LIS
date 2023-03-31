@@ -4,6 +4,7 @@ include_once 'Controller/UsuariosController.php';
 include_once 'Controller/CategoriasController.php';
 include_once 'Core/validaciones.php';
 include_once 'Controller/InventarioController.php';
+include_once 'Controller/VentasController.php';
 include_once 'Core/config.php';
 /*$model=new CategoriasModel();
 var_dump($model->get());*/
