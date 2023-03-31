@@ -15,7 +15,6 @@ class InventarioController extends Controller{
     public function index(){
         $viewBag=array();
         $productos=$this->model->get();
-        //$viewBag['nombre']="Fulanito";
         $viewBag['productos']=$productos;
         $this->render("index.php",$viewBag);
     }
@@ -78,7 +77,7 @@ class InventarioController extends Controller{
                 $viewBag['errores']=$errores;
                 $viewBag['producto']=$producto;
                 $this->render("new.php",$viewBag);
-                var_dump($producto);
+               
             }
         }
     }

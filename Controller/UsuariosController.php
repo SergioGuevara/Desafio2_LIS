@@ -5,15 +5,6 @@ require_once './Model/UsuariosModel.php';
 class UsuariosController extends Controller{
     private $model;
     function __construct(){
-        /*
-        if(is_null( $_SESSION['login_data'])){
-            header('location:'.PATH.'/Usuarios/login');
-        }
-        else if($_SESSION['login_data']['id_tipo_usuario']==2){
-            echo "<h1>PRueba</h1>";
-            exit;
-        }*/
-
         $this->model=new UsuariosModel();
     }
     public function login(){
@@ -55,27 +46,16 @@ class UsuariosController extends Controller{
                     array_push($errores,'Debes ingresar una contraseña');
                 }
             
-    
-                
-    
                 if(count($errores)==0){
                     if($this->model->insertUser($usuario)>0){
-                       // $_SESSION['success_message']="Editorial creado exitosamente";
                         header('location:'.PATH.'/Usuarios/login');
                     }
                     else{
-                        //array_push($errores,"YA existe un editorial con este codigo");
-                        //$viewBag['errores']=$errores;
-                        //$viewBag['editorial']=$editorial;
                         $this->render("singup.php",$viewBag);
-    
                     }
-                    
-    
                 }
                 else{
                     $viewBag['errores']=$errores;
-                    //$viewBag['errores']=$usuario;
                     $this->render("singup.php",$viewBag);
                 }
     

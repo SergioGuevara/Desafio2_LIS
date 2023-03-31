@@ -14,7 +14,6 @@ class CategoriasController extends Controller{
     public function index(){
         $viewBag=array();
         $categorias=$this->model->get();
-        //$viewBag['nombre']="Fulanito";
         $viewBag['categorias']=$categorias;
         $this->render("index.php",$viewBag);
     }

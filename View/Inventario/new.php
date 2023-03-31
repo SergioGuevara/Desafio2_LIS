@@ -33,7 +33,7 @@
                             
                     ?>
                    
-                    <form role="form" action="<?= PATH ?>/Inventario/add" method="POST">
+                    <form role="form" action="<?= PATH ?>/Inventario/add" method="POST" enctype="multipart/form-data">
                         <input type="hidden" name="op" value="insertar"/>
                         <div class="well well-sm"><strong><span class="glyphicon glyphicon-asterisk"></span>Campos requeridos</strong></div>
                         <div class="form-group">
