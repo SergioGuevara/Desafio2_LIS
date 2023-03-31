@@ -20,7 +20,8 @@
         ?>
     </header>
     <div class="row"><!--Contenedor principal-->
-        <div class="col-md-6"><!--Contenedor lateral-->
+        <div class="col-md-12"><!--Contenedor lateral-->
+        <a type="button" class="btn btn-primary btn-md" href="<?=PATH?>/Categorias/create"> Nueva Categoria</a>
             <table class="table">
                 <thead>
                     <tr>
@@ -37,7 +38,7 @@
                         ?>
                             <td><?= $categoria[0] ?></td>
                             <td><?= $categoria[1] ?></td>
-                            <td><a class="btn btn-primary" href="<?= PATH . '/Categorias/edit/' . $categoria['codigo_categoria'] ?>">Seleccionar</a></td>
+                            <td><a class="btn btn-primary" href="<?= PATH . '/Categorias/edit/' . $categoria['codigo_categoria'] ?>">Modificar</a></td>
                     </tr>
                 <?php } ?>
                 </tbody>

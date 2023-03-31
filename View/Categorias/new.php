@@ -1,4 +1,3 @@
-<?php defined('BASEPATH') OR exit('Acceso no autorizado')?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -14,7 +13,7 @@
 </head>
 <body>
 <?php
-        include './View/menu.php';
+        include './View/menuadmin.php';
     ?>
     <div class="container">
             <div class="row">
@@ -37,20 +36,14 @@
                    
             <form action="<?= PATH ?>/Categorias/add" method="POST">
                 <fieldset>
-                    <legend>Categoria Seleccionada</legend>
-                    <div class="mb-3">
+
+                    <div class="mb-3" hidden>
                         <label for="disabledTextInput" class="form-label">Codigo </label>
-                        <input type="text" id="disabledTextInput" value="null" class="form-control" placeholder="" readonly>
+                        <input type="text" id="codigo_categoria" name="codigo_categoria" value=""  class="form-control" placeholder="">
                     </div>
                     <div class="mb-3">
-                        <label for="disabledSelect" class="form-label">Categorias</label>
-                        <select id="disabledSelect" class="form-select">
-                            <?php
-                            foreach ($categorias as $categoria) {
-                            ?>
-                                <option value="<?= $categoria['codigo_categoria'] ?>"><?= $categoria['nombre_categoria'] ?></option>
-                            <?php } ?>
-                        </select>
+                    <label for="disabledTextInput" class="form-label">Categoria </label>
+                        <input type="text" id="nombre_categoria" name="nombre_categoria"  class="form-control" placeholder="">
                     </div>
 
                     <input type="submit" class="btn btn-info" value="Guardar" name="Guardar">
@@ -59,10 +52,6 @@
                 </div>
             </div>  
         </div>
-        <script>
-            $('#codigo_autor').select2();
-            $('#codigo_editorial').select2();
-        </script>
 </body>
 </html>
         

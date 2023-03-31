@@ -2,11 +2,11 @@
 <?php
 include_once 'Controller/CategoriasController.php';
 include_once 'Controller/ProductosController.php';
+include_once 'Controller/InventarioController.php';
 include_once 'Core/config.php';
 /*$model=new CategoriasModel();
 var_dump($model->get());*/
 $url=$_SERVER['REQUEST_URI'];
-session_start();
 //session_start();
 $url=explode("/",$url);
 $controller=empty($url[3])?"index":$url[3];

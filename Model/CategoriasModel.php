@@ -19,7 +19,7 @@ class CategoriasModel extends Model{
     return $this->setQuery($query,$categoria);
     }
     public function updateCategoria($categoria=array()){
-        $query="UPDATE catergorias SET nombre_categoria=:nombre_categoria WHERE codigo_categoria=:codigo_categoria";
+        $query="UPDATE categorias SET nombre_categoria=:nombre_categoria WHERE codigo_categoria=:codigo_categoria";
         return $this->setQuery($query,$categoria);
     }
     public function removeCategoria($id){
