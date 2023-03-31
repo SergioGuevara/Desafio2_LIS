@@ -19,11 +19,9 @@
         include './View/menuadmin.php';
         ?>
     </header>
-</br>
-    <a class="btn btn-primary" href="<?= PATH . '/Categorias/create/'?>">Nueva Categoria</a>
-    <center>
     <div class="row"><!--Contenedor principal-->
-        <div class="col-md-8"><!--Contenedor lateral-->
+        <div class="col-md-12"><!--Contenedor lateral-->
+        <a type="button" class="btn btn-primary btn-md" href="<?=PATH?>/Categorias/create"> Nueva Categoria</a>
             <table class="table">
                 <thead>
                     <tr>

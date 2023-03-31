@@ -13,10 +13,10 @@
             <a class="nav-link active" aria-current="page" href="#">Home</a>
           </li>
           <li class="nav-item ">
-            <a class="nav-link" href="#">Categorias</a>
+            <a class="nav-link" href="<?= PATH ?>/Categorias">Categorias</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="#">Inventario</a>
+            <a class="nav-link" href="<?= PATH ?>/Inventario">Inventario</a>
           </li>
           <li class="nav-item">
             <a class="nav-link" href="#">Ventas</a>

@@ -24,20 +24,18 @@ class CategoriasController extends Controller{
     public function add(){
         if(isset($_POST['Guardar'])){
             extract($_POST);
-            //echo var_dump($_POST);
             $errores=array();
             $categoria=array();
             $viewBag=array();
-            //$categoria['codigo_categoria']=$codigo_categoria;
+            $categoria['codigo_categoria']=NULL;
             $categoria['nombre_categoria']=$nombre_categoria;
 
             if(estaVacio($nombre_categoria)||!isset($nombre_categoria)){
-                array_push($errores,'Debes ingresar el nombre del editorial');
+                array_push($errores,'Debes ingresar el nombre de la categoria');
             }
             
             if(count($errores)==0){
                 if($this->model->insertCategoria($categoria)>0){
-                    $_SESSION['success_message']="Categoria generada exitosamente";
                     header('location:'.PATH.'/Categorias');
                 }
                 }
@@ -69,6 +67,7 @@ class CategoriasController extends Controller{
             if(count($errores)==0){
                 
                 $this->model->updateCategoria($categoria);
+                //var_dump($categoria);
                 header('location:'.PATH.'/Categorias');
 
             }

@@ -15,7 +15,7 @@ class CategoriasModel extends Model{
     }
     
     public function insertCategoria($categoria=array()){
-    $query="INSERT INTO categorias VALUES (null,:nombre_categoria)";
+    $query="INSERT INTO categorias VALUES (:codigo_categoria,:nombre_categoria)";
     return $this->setQuery($query,$categoria);
     }
     public function updateCategoria($categoria=array()){

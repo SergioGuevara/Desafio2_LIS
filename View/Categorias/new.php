@@ -38,24 +38,22 @@
                    
             <form action="<?= PATH ?>/Categorias/add" method="POST">
                 <fieldset>
-                    <legend>Categoria Seleccionada</legend>
-                    <div class="mb-3">
-                        <label for="disabledTextInput" class="form-label">Codigo</label>
-                        <input type="text" id="disabledTextInput" value="null" class="form-control" placeholder="" readonly>
+
+                    <div class="mb-3" hidden>
+                        <label for="disabledTextInput" class="form-label">Codigo </label>
+                        <input type="text" id="codigo_categoria" name="codigo_categoria" value=""  class="form-control" placeholder="">
                     </div>
                     <div class="mb-3">
-                    <input type="text" id="nombre_categoria" value="" class="form-control" name="nombre_categoria"placeholder="">
+                    <label for="disabledTextInput" class="form-label">Categoria </label>
+                        <input type="text" id="nombre_categoria" name="nombre_categoria"  class="form-control" placeholder="">
                     </div>
+
                     <input type="submit" class="btn btn-info" value="Guardar" name="Guardar">
                 </fieldset>
             </form>
                 </div>
             </div>  
         </div>
-        <script>
-            $('#codigo_autor').select2();
-            $('#codigo_editorial').select2();
-        </script>
 </body>
 </html>
         

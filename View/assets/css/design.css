@@ -1,0 +1,25 @@
+
+.head{
+    background-color: #004E95;
+    min-height: 100px;
+    padding-top: 20px;
+    color: white;
+    text-align: center;
+    padding-bottom: 10px;  
+}
+.title{
+    color: white;
+    font-weight: normal;
+    font-family: Arial, Helvetica, sans-serif;
+    text-align: center;
+    
+}
+
+
+.foot{
+    background-color: #004E95;
+    min-height: 50px;
+    text-align: center;
+    color: white;
+    padding-top: 10px;
+}
