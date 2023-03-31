@@ -26,4 +26,6 @@ class CategoriasModel extends Model{
         $query="DELETE FROM categorias WHERE codigo_categoria=:codigo_categoria";
         return $this->setQuery($query,['codigo_categoria'=>$id]);
     }
+
+    
 }

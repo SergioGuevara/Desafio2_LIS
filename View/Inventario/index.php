@@ -3,7 +3,7 @@
 
 <head>
     <meta charset="UTF-8">
-    <title>Administracion</title>
+    <title>Inventario</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel='stylesheet' href='https://getuikit.com/assets/uikit/dist/css/uikit.css?nc=2479'>
     <link rel="stylesheet" href="css/style.css">
@@ -27,7 +27,7 @@
         <div class="uk-flex uk-flex-between uk-margin-top">
             
             <div>
-                <a class="uk-button uk-button-primary uk-text-bold" href="#organization-new" uk-toggle>Agregar Productos</a>
+            <a type="button" class="btn btn-primary btn-md" href="<?=PATH?>/Inventario/create"> Agregar Producto</a>
                
             </div>
         </div>
@@ -49,7 +49,8 @@
                     <tbody>
                     <?php
                         foreach($productos as $producto){    
-                         //echo var_dump($producto);  
+                         //echo var_dump($producto);
+                         //echo var_dump(PATH."/View/assets/img/".$producto[3])  
                         //echo var_dump($_SESSION['CARRITO']); 
                      ?> 
                         <tr>

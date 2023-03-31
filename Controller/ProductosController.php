@@ -1,9 +1,10 @@
 <?php
 require_once 'Controller.php';
 require_once './Model/ProductosModel.php';
-include_once "vendor/autoload.php";
+//include_once "vendor/autoload.php";
 //include_once './Core/config.php';
-use Dompdf\Dompdf;
+
+//use Dompdf\Dompdf;
 class ProductosController extends Controller{
 
     private $model;
@@ -89,6 +90,7 @@ class ProductosController extends Controller{
     public function MostrarCarrito(){
         $this->render("mostrarCarrito.php");
     }
+
     public function generarPdf(){
        
         $dompdf = new Dompdf();
