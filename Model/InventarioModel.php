@@ -21,7 +21,7 @@ class InventarioModel extends Model{
         }
     }
         public function insertProducto($producto=array()){
-        $query="INSERT INTO productos VALUES (:codigo_producto,:nombre_producto,:descripcion,:imagen,:precio,:existencias,:codigo_categoria)";
+        $query="INSERT INTO productos VALUES (:codigo_producto,:nombre_producto,:descripcion,:imagen,:precio,:existencia,:codigo_categoria)";
         return $this->setQuery($query,$producto);
         }
 

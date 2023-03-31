@@ -37,6 +37,7 @@ class InventarioController extends Controller{
             $producto['existencia']=$existencia;
             $producto['codigo_categoria']=$codigo_categoria;
            
+
             if(estaVacio($codigo_producto)||!isset($codigo_producto)){
                 array_push($errores,'Debes ingresar el codigo del producto');
             }
@@ -67,13 +68,14 @@ class InventarioController extends Controller{
                   
                         if($this->model->insertProducto($producto)>0){
                             header('location:'.PATH.'/Inventario');
-                }
+                       }
+                           
                 }
             else{
                 $viewBag['errores']=$errores;
                 $viewBag['producto']=$producto;
                 $this->render("new.php",$viewBag);
-                
+                var_dump($producto);
             }
         }
     }

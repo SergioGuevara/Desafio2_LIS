@@ -15,7 +15,7 @@
     ?>
     <div class="container">
             <div class="row">
-                <h3>Nuevo editorial</h3>
+                <h3>Nuevo Producto</h3>
             </div>
             <div class="row">
                 <div class=" col-md-7">
@@ -80,11 +80,7 @@
                         </div>
                         <div class="uk-margin">
                             <div uk-form-custom="target: true">
-                                <input type="file" name="imagen"  value="codigo_producto" aria-label="Custom controls">
-                                <input class="uk-input uk-form-width-medium" type="text"
-                                    placeholder="Seleccione una imagen" aria-label="Custom controls" disabled>
-                            </div>
-                            
+                                <input type="file" name="imagen" id="imagen" aria-label="Custom controls">                            
                         </div>
                         <input type="submit" class="btn btn-info" value="Guardar" name="Guardar">
                         <a class="btn btn-danger" href="#">Cancelar</a>
