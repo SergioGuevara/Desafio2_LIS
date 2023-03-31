@@ -22,9 +22,7 @@
                 <br>
                 <br>
                 <div class="col-sm-12 col-sm-offset-4">
-                   <center> <h2>Crear una cuenta</h2></center>
-                    
-                    <?php
+                <?php
                         if(isset($errores)){
                             if(count($errores)>0){
                                 echo "<div class='alert alert-danger'><ul>";
@@ -37,11 +35,12 @@
                         }
 
                    ?>
+                   <center> <h2>Crear una cuenta</h2></center>
                     <br>
                     <center>
                     <form method="post" action="<?= PATH ?>/Usuarios/insertUsuario" class="col-sm-4 col-sm-offset-4">
                         <div class="form-group">
-                            <input type="text" class="form-control"  id="nombre" placeholder="Nombre" name="nombre" >
+                            <input type="text" class="form-control"  id="nombre" placeholder="Usuario" name="nombre" >
                         </div>
                         </br> 
                         <div class="form-group">
@@ -55,15 +54,13 @@
                         <div class="form-group">
                             <input type="password" class="form-control"  id="clave" placeholder="Elija una contraña" name="clave" >
                         </div>
-                        </br> 
-                        <div class="form-group">
-                            <input type="password" class="form-control"  id="confirmacion" placeholder="Confirme la contraseña" name="confirmacion" >
-                        </div>
                         </br>    
                         <div class="form-group">
                             <button class="btn btn-lg btn-primary btn-block" name="Crear" type="submit">Crear Cuenta</button>
                         </div>
                     </form>
+                    </br>
+                    </br>
                     </br>
                     </br>
                     </center>

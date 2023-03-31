@@ -32,6 +32,29 @@ class UsuariosController extends Controller{
                 $usuario['apellido_usuario']=$apellido;
                 $usuario['correo']=$correo;
                 $usuario['contrasenia']=$clave;
+                
+    
+                if(estaVacio($nombre)||!isset($nombre)){
+                    array_push($errores,'Debes ingresar el nombre de usuario');
+                }
+                
+                if(estaVacio($apellido)||!isset($apellido)){
+                    array_push($errores,'Debes ingresar un apellido'); 
+                }elseif(!esTexto($apellido)){
+                    array_push($errores,'Debes ingresar un apellido'); 
+                }
+                
+                if(estaVacio($correo)||!isset($correo)){
+                    array_push($errores,'Debes ingresar un email');
+                }
+                elseif(!esMail($correo))
+                {
+                    array_push($errores,'Debes ingresar un email valido');
+                }
+                if(estaVacio($clave)||!isset($clave)){
+                    array_push($errores,'Debes ingresar una contraseña');
+                }
+            
     
                 
     
@@ -51,8 +74,8 @@ class UsuariosController extends Controller{
     
                 }
                 else{
-                    //$viewBag['errores']=$errores;
-                    //$viewBag['editorial']=$editorial;
+                    $viewBag['errores']=$errores;
+                    //$viewBag['errores']=$usuario;
                     $this->render("singup.php",$viewBag);
                 }
     
@@ -83,7 +106,12 @@ class UsuariosController extends Controller{
             //echo var_dump($model->validateUser($user,$pass));
             $errores=array();
             $viewBag=array();
-            array_push($errores,"El usuario y/o password son incorrectos");
+            if(empty($_POST['nombre']) || empty($_POST['clave'])){
+                array_push($errores,"El usuario y/o contraseña no fueron ingresados");
+             }
+             else{
+                array_push($errores,"El usuario y/o contraseña son incorrectos");
+             }
             $viewBag['errores']=$errores;
             $this->render("login.php",$viewBag);
         }

@@ -22,9 +22,7 @@
                 <br>
                 <br>
                 <div class="col-sm-12 col-sm-offset-4">
-                   <center> <h2>Inicio de sesión</h2></center>
-                    
-                    <?php
+                <?php
                         if(isset($errores)){
                             if(count($errores)>0){
                                 echo "<div class='alert alert-danger'><ul>";
@@ -37,6 +35,9 @@
                         }
 
                    ?>
+                   <center> <h2>Inicio de sesión</h2></center>
+                    
+                    
                     <br>
                     <center>
                     <form method="post" action="<?= PATH ?>/Usuarios/validate" class="col-sm-4 col-sm-offset-4">
