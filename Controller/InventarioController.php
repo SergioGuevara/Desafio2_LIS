@@ -1,5 +1,6 @@
 <?php
 require_once 'Controller.php';
+require_once './Model/CategoriasModel.php';
 require_once './Model/InventarioModel.php';
 require_once './Core/validaciones.php';
 //include_once './Core/config.php';
@@ -19,7 +20,9 @@ class InventarioController extends Controller{
         $this->render("index.php",$viewBag);
     }
     public function create(){
-        $this->render("new.php");
+        $CategoriasModel=new CategoriasModel();
+        $viewBag['categorias']=$CategoriasModel->get();
+        $this->render("new.php",$viewBag);
     }
 
 

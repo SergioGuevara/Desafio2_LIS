@@ -11,7 +11,7 @@
 </head>
 <body>
 <?php
-        include './View/menu.php';
+        include './View/menuadmin.php';
     ?>
     <div class="container">
             <div class="row">
@@ -60,24 +60,38 @@
                         <div class="form-group">
                             <label for="precio">precio</label>
                             <div class="input-group">
-                                <input type="" class="form-control" id="precio" name="precio"  placeholder="Ingresa el telefono del contacto" >
+                                <input type="" class="form-control" id="precio" name="precio"  placeholder="Ingresa el precio" >
                                 <span class="input-group-addon"><span class="glyphicon glyphicon-asterisk"></span></span>
                             </div>
                         </div>
                         <div class="form-group">
                             <label for="existencia">existencia</label>
                             <div class="input-group">
-                                <input type="" class="form-control" id="existencia" name="existencia"  placeholder="Ingresa el telefono del contacto" >
+                                <input type="" class="form-control" id="existencia" name="existencia"  placeholder="Ingresa las existencias" >
                                 <span class="input-group-addon"><span class="glyphicon glyphicon-asterisk"></span></span>
                             </div>
                         </div>
+                        
+                            <label for="categoria">Categoria:</label>
+                            <div class="input-group">
+                                <select id="codigo_categoria" name="codigo_categoria" class="form-control">
+                                <?php
+                                    foreach($categorias as $categoria){
+                                ?>
+                                    <option value="<?=$categoria['codigo_categoria']?>"><?=$categoria['nombre_categoria']?></option>
+                                    <?php } ?>  
+                                </select>
+                                <span class="input-group-addon"><span class="glyphicon glyphicon-asterisk"></span></span>
+                            </div>
+                        
+                        <!--
                         <div class="form-group">
                             <label for="codigo_categoria">codigo_categoria</label>
                             <div class="input-group">
-                                <input type="" class="form-control" id="codigo_categoria" name="codigo_categoria"  placeholder="Ingresa el telefono del contacto" >
+                                <input type="" class="form-control" id="codigo_categoria" name="codigo_categoria"  placeholder="Ingresa la categoria" >
                                 <span class="input-group-addon"><span class="glyphicon glyphicon-asterisk"></span></span>
                             </div>
-                        </div>
+                        </div>-->
                         <div class="uk-margin">
                             <div uk-form-custom="target: true">
                                 <input type="file" name="imagen" id="imagen" aria-label="Custom controls">                            
