@@ -52,7 +52,7 @@
                         </div>
                         </br>
                         <div class="form-group">
-                            <input type="password" class="form-control"  id="clave" placeholder="Elija una contraña" name="clave" >
+                            <input type="password" class="form-control"  id="clave" placeholder="Contraseña" name="clave" >
                         </div>
                         </br>    
                         <div class="form-group">
