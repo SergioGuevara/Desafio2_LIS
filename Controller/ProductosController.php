@@ -24,8 +24,8 @@ class ProductosController extends Controller{
     }
     public function carrito(){
 
-        if(isset($_POST['btnAccion']))
-{
+        if(isset($_POST['btnAccion']) && !empty($_SESSION['login_data']))
+    {
     /*switch($_POST['btnAccion']){
         case 'Agregar':
     */
@@ -81,6 +81,9 @@ class ProductosController extends Controller{
                //$mensaje="Producto agregado al carrito";
                 }
             }
+        }
+        else{
+            header('location:'.PATH.'/Usuarios/login');
         }
     }
     public function MostrarCarrito(){

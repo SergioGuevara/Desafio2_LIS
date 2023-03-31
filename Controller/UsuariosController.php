@@ -37,8 +37,8 @@ class UsuariosController extends Controller{
     
                 if(count($errores)==0){
                     if($this->model->insertUser($usuario)>0){
-                        $_SESSION['success_message']="Editorial creado exitosamente";
-                        header('location:'.PATH.'/Productos');
+                       // $_SESSION['success_message']="Editorial creado exitosamente";
+                        header('location:'.PATH.'/Usuarios/login');
                     }
                     else{
                         //array_push($errores,"YA existe un editorial con este codigo");
@@ -80,7 +80,7 @@ class UsuariosController extends Controller{
            
         }
         else{
-            echo var_dump($model->validateUser($user,$pass));
+            //echo var_dump($model->validateUser($user,$pass));
             $errores=array();
             $viewBag=array();
             array_push($errores,"El usuario y/o password son incorrectos");

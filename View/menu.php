@@ -10,7 +10,12 @@
                         //condicionador ternario
                         echo (empty($_SESSION['CARRITO'])?0:array_sum(array_column($_SESSION['CARRITO'],"CANTIDAD")));
                     ?>)</a>
-            </li>
+        </li>
+      
+        </ul>
+        <ul>
+        <li><a href="<?=!empty($_SESSION['login_data'])?"":PATH.'/Usuarios/login'?>" class=""><?=!empty($_SESSION['login_data'])?$_SESSION['login_data'][0]:"login"?></a></li>
+        <li><a href="<?=empty($_SESSION['login_data'])?"":PATH.'/Usuarios/logout'?>" class=""><?=!empty($_SESSION['login_data'])?"Cerrar sesión":""?></a></li>
         </ul>
     </header>
         

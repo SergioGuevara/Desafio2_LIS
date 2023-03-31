@@ -55,6 +55,7 @@
                     </form>
                     </br>
                     </br>
+                    <li><a href="<?=PATH.'/Usuarios/singup'?>" class="">Crear una cuenta</a></li>
                     </br>
                     </br>
                     </br>
